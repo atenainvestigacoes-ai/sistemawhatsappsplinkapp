@@ -1,0 +1,34 @@
+{
+  "name": "splink-app-whatsapp-local",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.mjs",
+    "background": "node --env-file-if-exists=.env src/launch.mjs",
+    "doctor": "node --env-file-if-exists=.env scripts/doctor.mjs",
+    "setup": "node scripts/setup.mjs",
+    "download-model": "node --env-file-if-exists=.env scripts/download-model.mjs",
+    "test": "node --test test/*.test.mjs",
+    "mcp": "node --env-file-if-exists=.env src/mcp.mjs",
+    "check-release": "node scripts/check-release.mjs"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "7.0.0-rc14",
+    "qrcode": "1.5.4",
+    "pino": "10.4.0",
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "zod": "4.6.7"
+  },
+  "description": "Atendimento local WhatsApp com Codex, CRM, catálogo, pedidos e campanhas consentidas",
+  "author": "Marco Matias",
+  "license": "MIT",
+  "homepage": "https://www.splinkapp.com.br",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atenainvestigacoes-ai/sistemawhatsappsplinkapp.git"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  }
+}
